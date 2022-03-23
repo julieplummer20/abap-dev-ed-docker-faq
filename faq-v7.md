@@ -82,7 +82,7 @@
     ```
       -   returns the list of locally available images
 
-> <img src="images/media/image1.png"
+> <img src="media/image3.png"
 > style="width:5.58264in;height:0.4062in" />
 
 ## Starting / stopping / restarting
