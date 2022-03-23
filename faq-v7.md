@@ -458,7 +458,7 @@ SAP BW users using AMDPs
 
 ## SAP GUI, error starting
 
-<img src="images/media/image3.png"
+<img src="media/image5.png"
 style="width:4.22917in;height:1.58333in" />
 
 1.  System hasn’t warmed up
@@ -559,7 +559,7 @@ forum:
 
 <https://www.sap.com/community/topic/abap/all-content.html>
 
-<img src="images/media/image4.png"
+<img src="media/image6.png"
 style="width:1.64583in;height:1.3125in" />
 
 If it is an issue involving ABAP developer edition, remember to add the
