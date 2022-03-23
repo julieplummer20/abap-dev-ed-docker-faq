@@ -191,7 +191,7 @@ Reference](https://docs.docker.com/engine/reference/run/)
 
     2.  Select user specific system:
 
-<img src="images/media/image2.png" style="width:6.3in;height:3.24792in" />
+<img src="media/image4.png" style="width:6.3in;height:3.24792in" />
 
 3.  Logon to the system
 
