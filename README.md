@@ -31,8 +31,7 @@ in the ABAP Development forum, using this link: [ABAP Development: Ask a Questio
 If you wish to contribute, please send a pull request. 
 Contributions can be either:
 - Solution for an issue you encountered
-- 
-
+- A cookbook recipe for something you've tried out - e.g. using SSL with the developer edition or Graph functions
 
 For legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
