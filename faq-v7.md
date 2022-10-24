@@ -280,11 +280,8 @@ Instructions](https://hub.docker.com/_/sap-abap-trial/plans/ac8a4f9b-ae29-4afa-9
 You can apply new licenses every time you create a new one or start an
 existing container.
 
-If you are new to docker / Linux, Andre Fischer has provided a more
-detailed guide to updating Licenses:
-
-[How to install a new license in your SAP ABAP Platform Developer
-Edition](https://blogs.sap.com/2021/04/22/how-to-install-a-new-license-in-your-sap-abap-platform-developer-edition/)
+If you get an error, [Gregor Wolf](https://people.sap.com/gregorw) has helpfully provided a guide to updating the ABAP and HANA licenses:
+[Update ABAP and HANA License for the ABAP Platform, Developer Edition for Docker](https://blogs.sap.com/2022/08/12/update-abap-and-hana-license-for-the-abap-platform-developer-edition-for-docker/)
 
 # 3 Working with the ABAP developer edition
 
