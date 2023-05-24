@@ -500,6 +500,14 @@ The SAP system receives the time and the date from the OS. Therefore, you need t
 
 If you are an SAP customer or partner, see [SAP Note 2164980](https://launchpad.support.sap.com/#/notes/0002164980) for details.
 
+## Slow start in Docker Desktop, Mac / Windows
+The issue is that Docker Desktop uses a fixed amount of memory as defined in the resource config. If I want to run A4H on my MacBook then I set it to 20GB, and that's what Docker Desktop will consume on startup - even if I just want to run a tiny Kroki or Gitea system. Therefore starting up a 16GB+ Docker Desktop takes a little while if you want to run A4H on non-Linux hosts. 
+
+Secondly, A4H startup gets to a login-able state in a couple of minutes but then spends a good 10 minutes or so exercising the CPU fan by "doing stuff" (on Linux too) until it settles down. It's not really useable during this time so I consider this startup time.
+
+After a total of 20 minutes it's fast. Once it's settled in, I can run both A4H and 7.52 on VMware simultaneously on my 32GB MacBook without a problem, I can even start Windows VM too if I need it.
+[Comment by Mike Pokraka](https://blogs.sap.com/2021/02/15/sap-abap-platform-1909-developer-edition-available-soon/comment-page-2/#comment-623886)
+
 ## Slowing down, developer edition is
 
 “Lately, I find that I have had to compress my VM Drive to keep the
