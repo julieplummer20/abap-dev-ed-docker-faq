@@ -341,13 +341,6 @@ Yes. If you want to use [podman](https://podman.io/) instead of docker,
 please add also the parameter *-t* to the docker run command to
 correctly forward SIGINT to the container's init process.
 
-## SAP Fiori launchpad, connect to
-
-You must edit the Hosts file – on local machine, not inside Docker
-
-*Source:
-<https://answers.sap.com/questions/13296560/abap-trial-sap-abap-platform-1909-start-fiori-laun.html>*
-
 ## SAP Business / SAP S/4HANA content – eg. FB01, MM03, VA01
 
 We do not include business transactions in the developer edition,
@@ -368,14 +361,29 @@ If you want to play around with business content:
     – IDES – General Information about the usage of IDES
     systems](https://launchpad.support.sap.com/#/notes/799639)
 
-## SAP HANA Studio
+## SAP Fiori launchpad, connect to:
+
+You must edit the Hosts file – on local machine, not inside Docker
+
+*Source:
+<https://answers.sap.com/questions/13296560/abap-trial-sap-abap-platform-1909-start-fiori-laun.html>*## SAP HANA Studio
 
 You can install the HANA tools as Eclipse plugin
 -\> <https://tools.hana.ondemand.com/#hanatools>
 
+## SAP GUI for Java ("JavaGUI"), connect to:
+Ignore the System, Logon, Security, Language tabs. Go to Advanced tab > Expert Mode > enter IP address OR mapped DNS name of VM of your SAP System + SAP instance number (default = 00).
+e.g. NPL system, on VM on host 192.168.64.11, main instance = 00, hence SAPGUI port = 3200 => Connection string = 
+
+**`conn=/H/192.168.64.11/S/3200`**
+
+Depending on the Hypervisor you use, you may need to set up port forwarding from local machine port 3200 (say) to the VM port 3200.
+*(From: https://blogs.sap.com/2019/10/01/as-abap-7.52-sp04-developer-edition-concise-installation-guide/comment-page-1/#comment-625449 )
+
+
 ## SAP HANA database - via external tools, e.g. SAP HANA Studio, DBeaver, WebIDE
 
-### Solution 1, Connect to
+### Solution 1, connect to:
 
 If you want to connect to HANA via external tools like HANA Studio oder
 DBeaver, you have to publish the ports 30213 and 30215 in the docker run
