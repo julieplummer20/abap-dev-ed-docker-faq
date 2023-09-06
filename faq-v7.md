@@ -1,4 +1,4 @@
-# SAP ABAP Platform 1909, Developer Edition on Docker: Tips and Tricks
+# ABAP Trial Platform 1909 on Docker: Tips and Tricks
 
 - [1 Getting Started](#1-getting-started)
   * [Hardware requirements:](#hardware-requirements-)
