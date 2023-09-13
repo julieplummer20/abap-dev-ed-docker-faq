@@ -1,11 +1,6 @@
 # ABAP Trial Platform 1909 on Docker: Tips and Tricks
 
 - [1 Getting Started](#1-getting-started)
-  * [Hardware requirements:](#hardware-requirements-)
-  * [Linux](#linux)
-  * [Installation](#installation-and-starting)
-  * [Starting / stopping / restarting](#starting---stopping---restarting)
-    * [Starting:](#starting-)
     * [Shutting down gracefully](#shutting-down-gracefully)
     * [Restarting](#restarting)
   * [Other relevant Docker commands](#other-relevant-docker-commands)
@@ -28,18 +23,6 @@ Before you start, please make sure:
 - You know the entities docker image / docker container and their relationship
 - You know the basic commands to work with images and containers
 
-## Licenses
-The image comes with a SAP Hana license applied.
-
-You need to apply an SAP Demo License, available as a zip file here:  
-[SAP License Keys for Preview, Evaluation and Developer Versions
-("minisap")](https://go.support.sap.com/minisap/#/minisap)
-
-Or here:
-
-[SAP Trials and Downloads: ABAP Platform 1909 Developer Edition on SAP
-HANA 2.0](https://developers.sap.com/trials-downloads.html?search=ABAP+Platform+1909+Developer+Edition+on+SAP+HANA+2.0)
-
 ### Shutting down gracefully
 
 **Important: Make sure you stop the container in a controlled manner:**
@@ -56,6 +39,7 @@ would then need to create a new one.**
 ```
 docker start -ai a4h
 ```
+
 
 ## Other relevant Docker commands
 ```
@@ -81,6 +65,20 @@ docker ps -a
 
 For more information on docker commands, see [docker docs: Command-line
 Reference](https://docs.docker.com/engine/reference/run/)
+
+
+## Licenses
+The image comes with a SAP Hana license applied.
+
+You can apply an SAP Demo License, available as a zip file here:  
+[SAP License Keys for Preview, Evaluation and Developer Versions
+("minisap")](https://go.support.sap.com/minisap/#/minisap)
+
+Or here:
+
+[SAP Trials and Downloads: ABAP Platform 1909 Developer Edition on SAP
+HANA 2.0](https://developers.sap.com/trials-downloads.html?search=ABAP+Platform+1909+Developer+Edition+on+SAP+HANA+2.0)
+
 
 ## Set up SAP Gui and logon to the system ABAP Platform 1909
 
@@ -116,6 +114,8 @@ new CMD prompt and switch users:
 docker exec -it a4h bash  
 su a4hadm
 ```
+
+
 ## Getting started: MacBook
 
 Community member [Dylan Drummond](https://people.sap.com/murmelssonic)
@@ -125,11 +125,13 @@ Developer Edition** on a MacBook:
 [Install Abap Platform Developer Edition on Docker for
 MacBook](https://blogs.sap.com/2021/05/31/install-abap-platform-developer-edition-on-docker-for-macbook/)
 
+
 ## Getting started: Podman
 
 If you want to use [podman](https://podman.io/) instead of docker,
 please add also the parameter *-t* to the docker run command to
 correctly forward SIGINT to the container's init process.
+
 
 # 2 Licenses
 
@@ -142,9 +144,11 @@ Or here:
 
 [SAP Trials and Downloads: ABAP Platform 1909 Developer Edition on SAP HANA 2.0](https://developers.sap.com/trials-downloads.html?search=ABAP+Platform+1909+Developer+Edition+on+SAP+HANA+2.0)
 
+
 ## Error in license Keys
 e.g. "Logon not possible (error in license check). "
 See section 4 Errors -> Logon not possible (error in license check)
+
 
 ## Deleting and installing the license using bash
 1.	Start a4h and copy the hardware key
