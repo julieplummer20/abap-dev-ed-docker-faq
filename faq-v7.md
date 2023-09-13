@@ -19,7 +19,7 @@
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-# 1 Getting Started
+# 1 Getting Started 
 Please refer to the instructions in dockerhub:
 [dockerhub - ABAP Platform Trial](https://hub.docker.com/r/sapse/abap-platform-trial) > **Overview**.
 
