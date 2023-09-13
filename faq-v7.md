@@ -1,20 +1,23 @@
-# ABAP Trial Platform 1909 on Docker: Tips and Tricks
+# ABAP Trial Platform 1909 on Docker: Tips and Tricks <!-- omit from toc --> 
 
 - [1 Getting Started](#1-getting-started)
-    * [Shutting down gracefully](#shutting-down-gracefully)
-    * [Restarting](#restarting)
-  * [Other relevant Docker commands](#other-relevant-docker-commands)
+  - [Getting started: MacBook](#getting-started-macbook)
+  - [Getting started: Podman](#getting-started-podman)
+    - [Shutting down gracefully](#shutting-down-gracefully)
+    - [Restarting](#restarting)
+    - [Other relevant Docker commands](#other-relevant-docker-commands)
+  - [Licenses](#licenses)
+  - [Set up SAP Gui and logon to the system ABAP Platform 1909](#set-up-sap-gui-and-logon-to-the-system-abap-platform-1909)
 - [2 Licenses](#2-licenses)
+  - [Shutting down gracefully](#shutting-down-gracefully-1)
 - [3 Working with the ABAP developer edition](#3-working-with-the-abap-developer-edition)
 - [4 Errors](#4-errors)
 - [5 Users and Passwords](#5-users-and-passwords)
 - [6 Resources](#6-resources)
-  * [Troubleshooting Resources](#troubleshooting-resources)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+  - [Troubleshooting Resources](#troubleshooting-resources)
 
 
-# 1 Getting Started 
+# 1 Getting Started
 Please refer to the instructions in dockerhub:
 [dockerhub - ABAP Platform Trial](https://hub.docker.com/r/sapse/abap-platform-trial) > **Overview**.
 
@@ -22,6 +25,24 @@ Before you start, please make sure:
 - You understand the principles of docker container technology
 - You know the entities docker image / docker container and their relationship
 - You know the basic commands to work with images and containers
+
+
+## Getting started: MacBook
+
+Community member [Dylan Drummond](https://people.sap.com/murmelssonic)
+has written an excellent guide to installing **ABAP Platform 1909
+Developer Edition** on a MacBook:
+
+[Install Abap Platform Developer Edition on Docker for
+MacBook](https://blogs.sap.com/2021/05/31/install-abap-platform-developer-edition-on-docker-for-macbook/)
+
+
+## Getting started: Podman
+
+If you want to use [podman](https://podman.io/) instead of docker,
+please add also the parameter *-t* to the docker run command to
+correctly forward SIGINT to the container's init process.
+
 
 ### Shutting down gracefully
 
@@ -41,7 +62,7 @@ docker start -ai a4h
 ```
 
 
-## Other relevant Docker commands
+### Other relevant Docker commands
 ```
 docker exec -it a4h bash
 ```
@@ -116,23 +137,6 @@ su a4hadm
 ```
 
 
-## Getting started: MacBook
-
-Community member [Dylan Drummond](https://people.sap.com/murmelssonic)
-has written an excellent guide to installing **ABAP Platform 1909
-Developer Edition** on a MacBook:
-
-[Install Abap Platform Developer Edition on Docker for
-MacBook](https://blogs.sap.com/2021/05/31/install-abap-platform-developer-edition-on-docker-for-macbook/)
-
-
-## Getting started: Podman
-
-If you want to use [podman](https://podman.io/) instead of docker,
-please add also the parameter *-t* to the docker run command to
-correctly forward SIGINT to the container's init process.
-
-
 # 2 Licenses
 
 The image comes with a SAP Hana license applied.
@@ -145,12 +149,12 @@ Or here:
 [SAP Trials and Downloads: ABAP Platform 1909 Developer Edition on SAP HANA 2.0](https://developers.sap.com/trials-downloads.html?search=ABAP+Platform+1909+Developer+Edition+on+SAP+HANA+2.0)
 
 
-## Error in license Keys
+### Error in license Keys <!-- omit from toc --> 
 e.g. "Logon not possible (error in license check). "
 See section 4 Errors -> Logon not possible (error in license check)
 
 
-## Deleting and installing the license using bash
+### Deleting and installing the license using bash <!-- omit from toc --> 
 1.	Start a4h and copy the hardware key
 
     ```
@@ -191,14 +195,14 @@ If you get an error, [Gregor Wolf](https://people.sap.com/gregorw) has helpfully
 
 # 3 Working with the ABAP developer edition
 
-## Day 1 Experience and Tips and Tricks
+## Day 1 Experience and Tips and Tricks <!-- omit from toc --> 
 
 [Thomas Jung](https://people.sap.com/thomas.jung) shares his
 “experiences installing the new ABAP developer edition on my Windows
 laptop. I run Docker on WSL2. Plus some general tips and commands that I
 found helpful along the way.”
 
-## Enhancing your Developer Edition – Community Blog Post
+## Enhancing your Developer Edition – Community Blog Post <!-- omit from toc --> 
 
 “…Interesting things how you can either enhance, tune, make more
 advanced and similar sort of things to your SAP NetWeaver Application
@@ -211,7 +215,7 @@ pre-delivered , so no need to repeat sections 4 and 5:
 [Power up your SAP NetWeaver Application Server ABAP Developer
 edition](https://blog.maruskin.eu/2019/11/power-up-your-sap-netweaver-application.html)
 
-## ABAP Database Managed Procedures (AMDP) + SAP BW
+## ABAP Database Managed Procedures (AMDP) + SAP BW <!-- omit from toc --> 
 Yes, this works.
 
 However, if you want to use AMDPs in conjunction with SAP BW, you need
@@ -220,7 +224,7 @@ partner.**
 
 *Source: <https://twitter.com/pawelwiejkut/status/1383495200547377153>*
 
-## abapGIT, Can I use?
+## abapGIT, Can I use? <!-- omit from toc --> 
 YES.
 Briefly, abapGIT is a GIT client written in ABAP for ABAP. It offers an easy way for developers to upload their ABAP development objects to / import others’ interesting development objects to an openly available Git site. And it really is easy.
 Follow this blog for a great, end-to-end guide to installing the tool and cloning a sample package into your developer edition: https://blogs.sap.com/2017/06/21/abapgit-so-easy/ (GrahamRobbo)
@@ -230,24 +234,24 @@ There is a useful collection of projects here:
 •	https://github.com/SAP-samples
 
 
-## Language support, Adding to SAP ABAP Platform 1909
+## Language support, Adding to SAP ABAP Platform 1909 <!-- omit from toc --> 
 
 See this blog post for more information: *Source:
 <https://blogs.sap.com/2021/02/24/adding-languages-to-sap-abap-platform-1909-developer-edition-for-multilingual-development>*
 
-## Persistence: How is the data in the ABAP container persisted?
+## Persistence: How is the data in the ABAP container persisted? <!-- omit from toc -->
 
 The data is persisted in the Docker scratch space. For more information,
 see : [docker scratch
 space](https://docs.docker.com/get-started/05_persisting_data/)
 
-## Podman, can I use instead of Docker?
+## Podman, can I use instead of Docker? <!-- omit from toc --> 
 
 Yes. If you want to use [podman](https://podman.io/) instead of docker,
 please add also the parameter *-t* to the docker run command to
 correctly forward SIGINT to the container's init process.
 
-## SAP Business / SAP S/4HANA content – eg. FB01, MM03, VA01
+## SAP Business / SAP S/4HANA content – eg. FB01, MM03, VA01 <!-- omit from toc --> 
 
 We do not include business transactions in the developer edition,
 because it is purely intended for learning ABAP syntax and tools.
@@ -267,7 +271,7 @@ If you want to play around with business content:
     – IDES – General Information about the usage of IDES
     systems](https://launchpad.support.sap.com/#/notes/799639)
 
-## SAP Fiori launchpad, connect to:
+## SAP Fiori launchpad, connect to: <!-- omit from toc --> 
 
 You must edit the Hosts file – on local machine, not inside Docker
 
@@ -277,7 +281,7 @@ You must edit the Hosts file – on local machine, not inside Docker
 You can install the HANA tools as Eclipse plugin
 -\> <https://tools.hana.ondemand.com/#hanatools>
 
-## SAP GUI for Java ("JavaGUI"), connect to:
+## SAP GUI for Java ("JavaGUI"), connect to: <!-- omit from toc --> 
 Ignore the System, Logon, Security, Language tabs. Go to Advanced tab > Expert Mode > enter IP address OR mapped DNS name of VM of your SAP System + SAP instance number (default = 00).
 e.g. NPL system, on VM on host 192.168.64.11, main instance = 00, hence SAPGUI port = 3200 => Connection string = 
 
@@ -287,9 +291,9 @@ Depending on the Hypervisor you use, you may need to set up port forwarding from
 *(From: https://blogs.sap.com/2019/10/01/as-abap-7.52-sp04-developer-edition-concise-installation-guide/comment-page-1/#comment-625449 )
 
 
-## SAP HANA database - via external tools, e.g. SAP HANA Studio, DBeaver, WebIDE
+## SAP HANA database - via external tools, e.g. SAP HANA Studio, DBeaver, WebIDE <!-- omit from toc --> 
 
-### Solution 1, connect to:
+### Solution 1, connect to: <!-- omit from toc --> 
 
 If you want to connect to HANA via external tools like HANA Studio oder
 DBeaver, you have to publish the ports 30213 and 30215 in the docker run
@@ -304,7 +308,7 @@ Same with WebIDE:
 *Source:
 <https://blogs.sap.com/2021/02/15/sap-abap-platform-1909-developer-edition-available-soon/comment-page-1/#comment-558716>*
 
-### Solution 2: Troubleshooting
+### Solution 2: Troubleshooting <!-- omit from toc --> 
 
 “I ran into problem with tenant connection from Hana Studio, and it was
 resolved with [SAP Note 2551889](https://launchpad.support.sap.com/#/notes/2551889)”
@@ -312,7 +316,7 @@ resolved with [SAP Note 2551889](https://launchpad.support.sap.com/#/notes/25518
 *Source:
 <https://blogs.sap.com/2021/02/15/sap-abap-platform-1909-developer-edition-available-soon/comment-page-1/#comment-560001>*
 
-## SAP HANA, Using Multi Model Capabilities of
+## SAP HANA, Using Multi Model Capabilities of <!-- omit from toc --> 
 
 Great three-part blog series by Uwe Fetzer on:
 
@@ -325,7 +329,7 @@ Great three-part blog series by Uwe Fetzer on:
 -   [Part III: Graph
     functions](https://blogs.sap.com/2021/02/18/using-multi-model-capabilities-of-sap-hana-in-the-new-abap-1909-developer-edition-part-iii-graph-functions/)
 
-## SAP Screen Personas, using developer edition with
+## SAP Screen Personas, using developer edition with <!-- omit from toc --> 
 
 Note: SAP Customers and Partners only.
 
@@ -334,24 +338,24 @@ Steve Rumsby has written an excellent blog post on how to set this up:
 [SAP Screen Personas on the ABAP developer edition
 system](https://blogs.sap.com/2021/03/22/sap-screen-personas-on-the-abap-developer-edition/)
 
-## SSL certificate, Secure your SAP ABAP System with
+## SSL certificate, Secure your SAP ABAP System with <!-- omit from toc --> 
 
 Video by Jakub Marius Kjaer:
 
 <https://www.youtube.com/watch?v=k9ET6clRjG8>
 
-## WinSCP or equivalent
+## WinSCP or equivalent <!-- omit from toc --> 
 1.	Easiest: **Before running container**: Share a common folder between the docker image and the host using the `-v` flag in the `docker run`.
 
 2. Start a web server on you host PC (for example with `Xampp`) and `CURL` the files from the docker image.
 
-## Wireshark with SAP Dissectors for Ubuntu and macOS
+## Wireshark with SAP Dissectors for Ubuntu and macOS <!-- omit from toc --> 
 [Wireshark with SAP Dissectors for Ubuntu and macOS](https://blogs.sap.com/2022/06/12/wireshark-with-sap-dissectors-for-ubuntu-and-macos/)
 By Dylan Drummond
 
-# 4 Errors
+# 4 Errors  
 
-## Azure Container Instance, error trying to connect with
+## Azure Container Instance, error trying to connect with <!-- omit from toc --> 
 
 **UPDATE, 2<sup>nd</sup> March, 2021**
 
@@ -366,12 +370,12 @@ is not guaranteed.
 *Source:
 <https://answers.sap.com/questions/13291704/deploy-abap-platform-developer-edition-1909-docker.html?childToView=13295341#comment-13295341>*
 
-## SAP Business Warehouse + AMDP: Errors
-
+## SAP Business Warehouse + AMDP: Errors <!-- omit from toc --> 
+ 
 <https://twitter.com/pawelwiejkut/status/1383495200547377153> - only for
 SAP BW users using AMDPs
 
-## SAP GUI, error starting
+## SAP GUI, error starting <!-- omit from toc --> 
 
 <img src="media/image5.png"
 style="width:4.22917in;height:1.58333in" />
@@ -404,7 +408,7 @@ logon
 *Source:
 <https://blogs.sap.com/2021/02/15/sap-abap-platform-1909-developer-edition-available-soon/comment-page-1/#comment-558556>*
 
-## License check, error in
+## License check, error in <!-- omit from toc --> 
 Cause: The Linux OS, e.g. SLES has the wrong date.
 Solution: Check the date and time of the server at OS level, in order to verify that it’s correct.
 
@@ -414,15 +418,15 @@ The SAP system receives the time and the date from the OS. Therefore, you need t
 
 If you are an SAP customer or partner, see [SAP Note 2164980](https://launchpad.support.sap.com/#/notes/0002164980) for details.
 
-## Slow start in Docker Desktop, Mac / Windows
+## Slow start in Docker Desktop, Mac / Windows <!-- omit from toc --> 
 The issue is that Docker Desktop uses a fixed amount of memory as defined in the resource config. If I want to run A4H on my MacBook then I set it to 20GB, and that's what Docker Desktop will consume on startup - even if I just want to run a tiny Kroki or Gitea system. Therefore starting up a 16GB+ Docker Desktop takes a little while if you want to run A4H on non-Linux hosts. 
 
 Secondly, A4H startup gets to a login-able state in a couple of minutes but then spends a good 10 minutes or so exercising the CPU fan by "doing stuff" (on Linux too) until it settles down. It's not really useable during this time so I consider this startup time.
 
 After a total of 20 minutes it's fast. Once it's settled in, I can run both A4H and 7.52 on VMware simultaneously on my 32GB MacBook without a problem, I can even start Windows VM too if I need it.
 [Comment by Mike Pokraka](https://blogs.sap.com/2021/02/15/sap-abap-platform-1909-developer-edition-available-soon/comment-page-2/#comment-623886)
-
-## Slowing down, developer edition is
+ 
+## Slowing down, developer edition is <!-- omit from toc --> 
 
 “Lately, I find that I have had to compress my VM Drive to keep the
 system from slowing down” or similar.
@@ -498,5 +502,3 @@ questions:
     the vast majority of the community
 
 -   There is no capacity to monitor all blogs for all released versions.
-
-.
