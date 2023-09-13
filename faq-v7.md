@@ -20,113 +20,15 @@
 
 
 # 1 Getting Started
+Please refer to the instructions in dockerhub:
+[dockerhub - ABAP Platform Trial](https://hub.docker.com/r/sapse/abap-platform-trial) > **Overview**.
 
-## Hardware requirements:
+Before you start, please make sure:
+- You understand the principles of docker container technology
+- You know the entities docker image / docker container and their relationship
+- You know the basic commands to work with images and containers
 
-## Linux
-
--   4 CPUs
-
--   16GB RAM
-
--   150GB Disk
-
-> **Windows**
-
--   4 CPUs for Docker Desktop
-
--   16GB for Docker Desktop
-
--   170GB disk for Docker Desktop
-
-> **macOS**
-
--   4 CPUs for Docker Desktop
-
--   16GB for Docker Desktop
-
--   170GB disk for Docker Desktop
-
-## Installation
-
-1.  Create a [Docker account](https://hub.docker.com/_/sap-abap-trial/plans/ac8a4f9b-ae29-4afa-9b39-25aeea24b821?tab=instructions).
-
-2.  Download Docker [Download Docker Desktop (Windows/Mac/Linux)](https://www.docker.com/products/docker-desktop)
-
-3.  Make sure Docker Engine is running:
-
-    ```
-    docker info
-    ```
-      -   returns detailed info about docker if docker is running
-
-4.  Login to Docker
-
-    ```
-    docker login --username=\<yourhubusername\>
-    --mail=\<youremail@company.com\>
-    ```
-
-5.  Pull the image ABAP Platform 1909 DevEdition to your local PC
-
-    ```
-    docker pull store/saplabs/abaptrial:1909
-    ```
-
-      This can take a few hours.
-
-6.  Check that the pull was successful
-
-    ```
-    docker images
-    ```
-      -   returns the list of locally available images
-
-> <img src="media/image3.png"
-> style="width:5.58264in;height:0.4062in" />
-
-## Starting / stopping / restarting
-
-### Starting:
-
-Create a container and start the ABAP system:
-
-**GNU/Linux**
-
-```
-docker run --stop-timeout 3600 -it --name a4h -h vhcala4hci
-store/saplabs/abaptrial: latest -agree-to-sap-license -skip-limits-check
-```
-
-**Other OS:**
-
-```
-docker run --stop-timeout 3600 -i --name a4h -h vhcala4hci -p 3200:3200
--p 3300:3300 -p 8443:8443 -p 30213:30213 -p 50000:50000 -p 50001:50001
-saplabs/abaptrial:latest -agree-to-sap-license -skip-limits-check
-```
-
-Notes:
-
-- -i = start the container in interactive mode, so that later we can stop
-the system gracefully using Ctrl-C.
-
-- --stop-timeout = Docker will give HDB enough time to write its InMemory
-database onto disk upon shutdown request.
-
-- We name the container *a4h* for easier reference in future commands.
-
-- If you want to use **[podman](https://podman.io/)** instead of docker,
-please add also the parameter *-t* to correctly forward SIGINT to the
-container's init process.
-
-- After all the services are successfully started, it is a good idea to
-wait until CPU load goes down and amount of used of memory stops from
-growing before you attempt to logon to the system.
-
-For more information, see the [Setup
-Instructions](https://hub.docker.com/_/sap-abap-trial/plans/ac8a4f9b-ae29-4afa-9b39-25aeea24b821?tab=instructions)
-
+## Licenses
 The image comes with a SAP Hana license applied.
 
 You need to apply an SAP Demo License, available as a zip file here:  
