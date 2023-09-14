@@ -197,7 +197,14 @@ If you get an error, [Gregor Wolf](https://people.sap.com/gregorw) has helpfully
 
 # 3 Working with the ABAP developer edition
 
-## Day 1 Experience and Tips and Tricks <!-- omit from toc --> 
+## Day 1 Experience, August 2023 by Martin Marusking <!-- omit from toc --> 
+Martin wrote a similar blog post for the previous version of 1909, Developer Edition, but this is the fresh version, hot off the press for 2023:
+[Something about SAP: ABAP Platform Trial 1909 SP07](https://blog.maruskin.eu/2023/08/abap-platform-trial-1909-sp07.html)
+Great to see people getting stuck in with the new Trial
+
+![ABAP Trial Platform 1909, SP07 in Docker Desktop for Windows. H/T Martin Maruskin](martin-maruskin-docker.png)
+
+## Day 1 Experience and Tips and Tricks, 2021 by Thomas Jung <!-- omit from toc --> 
 
 [Thomas Jung](https://people.sap.com/thomas.jung) shares his
 “experiences installing the new ABAP developer edition on my Windows
@@ -205,7 +212,6 @@ laptop. I run Docker on WSL2. Plus some general tips and commands that I
 found helpful along the way.”
 
 ## Enhancing your Developer Edition – Community Blog Post <!-- omit from toc --> 
-
 “…Interesting things how you can either enhance, tune, make more
 advanced and similar sort of things to your SAP NetWeaver Application
 Server ABAP Developer edition” – interesting collection by Martin
