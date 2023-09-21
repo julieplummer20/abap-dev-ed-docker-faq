@@ -197,7 +197,7 @@ If you get an error, [Gregor Wolf](https://people.sap.com/gregorw) has helpfully
 
 # 3 Working with the ABAP developer edition
 
-## Day 1 Experience, August 2023 by Martin Marusking <!-- omit from toc --> 
+## Day 1 Experience, August 2023 by Martin Maruskin <!-- omit from toc --> 
 Martin wrote a similar blog post for the previous version of 1909, Developer Edition, but this is the fresh version, hot off the press for 2023:
 [Something about SAP: ABAP Platform Trial 1909 SP07](https://blog.maruskin.eu/2023/08/abap-platform-trial-1909-sp07.html)
 Great to see people getting stuck in with the new Trial
