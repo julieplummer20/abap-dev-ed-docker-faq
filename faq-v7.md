@@ -51,7 +51,7 @@ correctly forward SIGINT to the container's init process.
 **Important: Make sure you stop the container in a controlled manner:**
 
 ```
-docker stop --time-out 7200 a4h
+docker stop --time 7200 a4h
 ```
 
 **Otherwise the container becomes unusable and all changes are lost. You
