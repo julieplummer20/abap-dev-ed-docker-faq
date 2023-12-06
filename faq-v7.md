@@ -1,9 +1,9 @@
 # ABAP Trial Platform 1909 on Docker: Tips and Tricks <!-- omit from toc --> 
 
 - [1 Getting Started](#1-getting-started)
-  - [Getting started: MacBook](#getting-started-macbook)
-  - [Getting started: Podman](#getting-started-podman)
-    - [Shutting down gracefully](#shutting-down-gracefully)
+    - [Getting started: MacBook](#getting-started-macbook)
+    - [Getting started: Podman](#getting-started-podman)
+  - [Shutting down gracefully](#shutting-down-gracefully)
     - [Restarting](#restarting)
     - [Other relevant Docker commands](#other-relevant-docker-commands)
   - [Licenses](#licenses)
@@ -29,7 +29,7 @@ Before you start, please make sure:
 - You know the basic commands to work with images and containers
 
 
-## Getting started: MacBook
+### Getting started: MacBook
 
 Community member [Dylan Drummond](https://people.sap.com/murmelssonic)
 has written an excellent guide to installing **ABAP Platform 1909
@@ -39,14 +39,14 @@ Developer Edition** on a MacBook:
 MacBook](https://blogs.sap.com/2021/05/31/install-abap-platform-developer-edition-on-docker-for-macbook/)
 
 
-## Getting started: Podman
+### Getting started: Podman
 
 If you want to use [podman](https://podman.io/) instead of docker,
 please add also the parameter *-t* to the docker run command to
 correctly forward SIGINT to the container's init process.
 
 
-### Shutting down gracefully
+## Shutting down gracefully
 
 **Important: Make sure you stop the container in a controlled manner:**
 
